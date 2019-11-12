@@ -49,7 +49,7 @@ table {
 a{
 	text-decoration: none;
 }
-.wrapper{
+.wrapper, .topnav{
 	max-width: 1100px;
 	/*width: 1100px;*/
 	height: 100%;
@@ -66,6 +66,91 @@ label:hover{
 /*=======================*/
 /*==== HEADER ========*/
 /*=======================*/
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav div:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+   	position: absolute;
+    right: 0;
+    top: 0;
+   
+  }
+ 
+	.topnav.responsive .header-left
+  {
+  	float: none;
+  	 display: block;
+  	 position: relative;
+  	 background-color: #0c0c0c;
+  	
+   
+  }
+   .topnav.responsive .header-right:not(.header-expanded-menu){
+   	float: none;
+  	 display: block;
+  	 position: relative;
+   }
+   .header-right .international-edition{
+   	display: none;
+   }
+  .topnav.responsive .header-right .page-search{
+	 display: block;
+	
+  }
+  .header-right .page-search .page-search-field{
+  	top:0;
+	right: 0;
+  	display: block;
+  	width: 100%;
+  	z-index: 3000;
+  }
+ .header-right .page-search .page-search-field-label{
+ 	color:black;
+ 	right: 0;
+ 	display: block;
+ 	top:0;
+ 	z-index: 3000;
+ }
+  
+  .header-left .page-nav ul{
+  	flex-direction: column;
+  	justify-content: flex-start;
+  	align-items: flex-end;
+  	height: 350px;
+  	width: 100vw; 
+  	position: absolute;
+  	top:80px;
+  	right: 0;
+	z-index: 1000;
+  	background: rgba(0,0,0,.9);
+  	
+
+  }
+   .header-left .page-nav ul li{
+   	margin-top:10px;
+   	margin-bottom:5px;
+   	margin-right: 15px;
+   	color: rgb(191, 191, 191);
+   }
+  .header-left .page-nav ul li::after{
+	content: "";
+}
+
+}
+
 .page-header{
 	height: 50px;
 	width: 100%;
@@ -82,6 +167,7 @@ label:hover{
 	display: flex;
 	height: 100%;
 }
+
 .header-right{
 	float:right;
 	display: flex;
@@ -92,7 +178,8 @@ label:hover{
 	display: flex;
 	align-items: center;
 	height: 100%;
-	margin-left: 15px;
+	/*margin-left: 15px;*/
+	margin-left: 65px;
 }
 .page-nav ul li{
 	margin: 0 0 0 5px; /*t,r,b=0 l:5*/
@@ -115,9 +202,8 @@ label:hover{
 .page-logo img{
 	position:absolute;
 	width: 100%;
-	z-index: 400;
+	z-index: 100;
 }
-
 .search-switcher-label{
 	margin: 0 15px; /*t,b:0 l,r:15*/
 }
@@ -259,9 +345,8 @@ label:hover{
 	color:#fff;
 }
 .expanded-top-block .col-2{
-	padding-left: 10px;
+	padding-left: 0;
 	padding-right: 0;
-
 }
 .expanded-bottom-block .international-block{
 	display: flex;
@@ -270,7 +355,7 @@ label:hover{
 	width: 80%;
 	justify-content: flex-start;
 	background: transparent;
-	padding-left: 10px;
+	padding-left: 0;
 
 }
 .expanded-bottom-block .international-block ul{
@@ -385,7 +470,7 @@ article h3{
 	background: #e6e6e6;
 	padding: 10px 10px 15px; /*t:10 l,r:10 b:15*/
 	/*margin-top: -23px;*/
-	margin:-23px 30px 0; /*t:-23 l,r:30 b:0*/
+	margin:-23px 30px 0;
 	position: relative;
 	z-index:100;
 }
@@ -518,6 +603,7 @@ article h3{
 .footer-bottom-block img{
 	height: 36px;
 	margin-right: 10px;
+	
 }
 .footer-bottom-block{
 	padding-top: 40px;
@@ -566,6 +652,7 @@ article h3{
 .footer-copy{
 	text-align: right;
 	color:rgb(89, 89, 89);
+	
 	line-height: 1.6;
 	margin-bottom: 5px;
 }
@@ -574,6 +661,8 @@ article h3{
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	
 }
 
 .footer-menu ul li a{

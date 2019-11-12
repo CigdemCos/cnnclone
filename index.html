@@ -3,20 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CNN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header class="page-header">
-		<div class="wrapper">
-			<div class="header-left">
+		<div class="wrapper topnav" id="myTopnav">
+			
 				<div class="page-logo">
 					<a href="/">
 					<img src="img/logo_cnn.png" alt="Page Logo">
 					</a>
 				</div>
-			
+			<div class="header-left">
 			<nav class="page-nav">
 			  <ul>
 				<li><a href="">Regions</a></li>
@@ -34,7 +36,7 @@
 			</nav>
 		  </div><!--header-left-->
 			<div class="header-right">
-				<div class="international-edition">
+				<div class="international-edition" id="edition">
 					<input type="checkbox" id="international-switcher" hidden>
 					<label for="international-switcher">International Edition +</label>
 					<div class="international-block">
@@ -56,7 +58,7 @@
 						</div>
 					</div><!--international-block-->
 				</div><!--international-edition-->
-				<div class="page-search">
+				<div class="page-search" id="psearch">
 					<input type="checkbox" id="search-switcher" hidden>
 					<input type="search" placeholder="Search CNN..." class="page-search-field" id="page-search-field-id">
 					<label for="page-search-field-id" class="page-search-field-label">Search >></label>
@@ -250,13 +252,24 @@
 						  <button class="confirm">Confirm</button>
 						</div>
 					  </div><!--international-block-->
-					</div><!--expanded-bottom-block-->
+					</div><!--expanded-bottom-block- -->
 				</div><!--wrapper-->
 		   </div><!--header-expanded-menu-block-->
 		</div><!--header-expanded-menu--->
 	</div> <!--header-right-->
+
+
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <!--  <i class="fas fa-hamburger"></i>-->
+  	<i class="fas fa-bars"></i>
+  </a>
+
   </div>  <!--wrapper-->
 </header>
+
+
+
+
 <main>
 	<div class="wrapper">
 	  <div class="container-fluid">
@@ -374,20 +387,20 @@
 				<div class="row">
 					<div class="col-3 no-padding-right">
 						<img  src="img/articles/article-9.jpg" alt="img-9">
-					</div><!--col-3-->
+					</div><!--col-5-->
 					<div class="col-9">
 						<h3 class="small-size">Sharapova pulls out of Wimbledon qualifying</h3>
-					</div><!--col-9-->
+					</div><!--col-7-->
 				</div><!--row-->
 			</article>
 			<article class="top-border">
 				<div class="row">
 					<div class="col-3 no-padding-right">
 						<img  src="img/articles/article-10.jpg" alt="img-10">
-					</div><!--col-3-->
+					</div><!--col-5-->
 					<div class="col-9">
 						<h3 class="small-size">Why there are 47 Lebanons in the US</h3>
-					</div><!--col-9-->
+					</div><!--col-7-->
 				</div><!--row-->
 			</article>
 	   		</div><!--col/sec2-->
@@ -860,5 +873,7 @@
 	 </div><!--footer-bottom-right-->
    </div><!--wrapper-->
 </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
