@@ -49,12 +49,7 @@ table {
 a{
 	text-decoration: none;
 }
-.wrapper, .topnav{
-	max-width: 1100px;
-	/*width: 1100px;*/
-	height: 100%;
-	margin:0 auto;
-}
+
 
 label:hover{
 	cursor:pointer;
@@ -66,11 +61,20 @@ label:hover{
 /*=======================*/
 /*==== HEADER ========*/
 /*=======================*/
+
+.wrapper, .topnav{
+	max-width: 1100px;
+	/*width: 1100px;*/
+	height: 100%;
+	margin:0 auto;
+}
+
 .topnav .icon {
   display: none;
 }
 
 @media screen and (max-width: 1000px) {
+
   .topnav div:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -81,27 +85,28 @@ label:hover{
 }
 
 @media screen and (max-width: 1000px) {
-  .topnav.responsive {position: relative;}
+
+  .topnav.responsive {
+  	position: relative;
+
+  }
   .topnav.responsive .icon {
    	position: absolute;
     right: 0;
     top: 0;
-   
   }
  
-	.topnav.responsive .header-left
+  .topnav.responsive .header-left
   {
   	float: none;
   	 display: block;
-  	 position: relative;
+  	 /*position: relative;*/
   	 background-color: #0c0c0c;
-  	
-   
   }
    .topnav.responsive .header-right:not(.header-expanded-menu){
    	float: none;
   	 display: block;
-  	 position: relative;
+  	/* position: relative;*/
    }
    .header-right .international-edition{
    	display: none;
@@ -110,6 +115,7 @@ label:hover{
 	 display: block;
 	
   }
+
   .header-right .page-search .page-search-field{
   	top:0;
 	right: 0;
@@ -118,8 +124,8 @@ label:hover{
   	z-index: 3000;
   }
  .header-right .page-search .page-search-field-label{
- 	color:black;
- 	right: 0;
+ 	/*color:black;*/
+ 	right: -15px;
  	display: block;
  	top:0;
  	z-index: 3000;
@@ -127,7 +133,7 @@ label:hover{
   
   .header-left .page-nav ul{
   	flex-direction: column;
-  	justify-content: flex-start;
+  	/*justify-content: flex-start;*/
   	align-items: flex-end;
   	height: 350px;
   	width: 100vw; 
@@ -136,8 +142,6 @@ label:hover{
   	right: 0;
 	z-index: 1000;
   	background: rgba(0,0,0,.9);
-  	
-
   }
    .header-left .page-nav ul li{
    	margin-top:10px;
@@ -148,8 +152,9 @@ label:hover{
   .header-left .page-nav ul li::after{
 	content: "";
 }
+}/*@media max-width:1000px*/
 
-}
+
 
 .page-header{
 	height: 50px;
@@ -202,7 +207,7 @@ label:hover{
 .page-logo img{
 	position:absolute;
 	width: 100%;
-	z-index: 100;
+	z-index: 2000;
 }
 .search-switcher-label{
 	margin: 0 15px; /*t,b:0 l,r:15*/
@@ -215,7 +220,7 @@ label:hover{
 	position: relative;
 }
 .page-search-field{
-	width: 970px;
+	width: 980px;
 	position:absolute;
 	right: 40px;
 	top:-7px;
@@ -228,7 +233,7 @@ label:hover{
 }
 .page-search-field-label{
 	position: absolute;
-	right: 40px;
+	right: 27px;
 	top:-7px;
 	height: 30px;
 	background: transparent;
@@ -275,7 +280,7 @@ label:hover{
 .international-block hr{
 	background: transparent;
 	border:0; /*before setting our own border, we first need
-	to remove any existin border*/
+	to remove any existing border*/
 	border-top: 1px solid #bfbfbf;
 
 }
@@ -303,7 +308,7 @@ label:hover{
 .confirm{
 	background: transparent;
 	border:1px solid #bfbfbf;
-	padding: 0 15px;
+	padding: 0 15px; /*t,b:0 l,r:15*/
 	height: 30px;
 	line-height: 30px; /*making the content center*/
 	color:#bfbfbf;
@@ -317,7 +322,7 @@ label:hover{
 	width: 100vw; /*1vw=1/100 th of the entire page*/
 	/*height: 470px;*/
 	background: rgba(0,0,0,.9);
-	position: absolute;
+	position: absolute; /*It takes as reference browser window*/
 	top:50px;
 	right: 0;
 	display: none;
@@ -328,6 +333,7 @@ label:hover{
 }
 .expanded-top-block{
 	padding-top: 25px;
+	margin-left: 10px;
 }
 .expanded-top-block h3{
 	font-size: 22px;
@@ -347,6 +353,9 @@ label:hover{
 .expanded-top-block .col-2{
 	padding-left: 0;
 	padding-right: 0;
+}
+.expanded-bottom-block{
+	margin-left:10px;
 }
 .expanded-bottom-block .international-block{
 	display: flex;
@@ -425,7 +434,7 @@ h1{
 	width: auto;
 	padding:0 10px; /*t,b:0 l,r:10*/
 	position: absolute;
-	bottom:100%; 
+	bottom:100%;
 	left:0;
 	white-space: nowrap;
 
@@ -435,7 +444,7 @@ h1{
 }
 .label-block{
 	position: absolute;
-	bottom: 3px;
+	bottom:3px;
 	left: 0;
 }
 article{
@@ -552,6 +561,20 @@ article h3{
 .dark-section .full-width-b{
 	width: 817.5px;
 }
+
+@media screen and (max-width: 960px) {
+ .dark-section .full-width-b{
+	width: 100%;
+	font-size: 24px;
+}
+.full-width-heading{
+	font-size: 24px;
+} 
+ 
+}
+
+
+
 /*=======================*/
 /*==== FOOTER ========*/
 /*=======================*/
@@ -609,14 +632,15 @@ article h3{
 	padding-top: 40px;
 }
 .footer-bottom-left{
-	position:relative;
 	display: flex;
 	align-items: center;
 }
 .footer-bottom-block .international-edition{
+	position:relative;
 	padding:10px 0;
 }
 .footer-bottom-block .international-block{
+	position: absolute;
   	top:-260px;
   	left:-46px;
   	display: none;
@@ -652,7 +676,6 @@ article h3{
 .footer-copy{
 	text-align: right;
 	color:rgb(89, 89, 89);
-	
 	line-height: 1.6;
 	margin-bottom: 5px;
 }
@@ -661,8 +684,6 @@ article h3{
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-
-	
 }
 
 .footer-menu ul li a{
@@ -678,5 +699,5 @@ article h3{
 	content: "";
 }
 .footer-menu .ad{
-	padding-right: 20px;
+	padding-right: 15px;
 }
